@@ -9,7 +9,12 @@ export class SolicitudComponent implements OnInit {
 
   solicitud = {nombre: "Javier"};
 
-  constructor() { }
+  constructor() {
+    setInterval(() => {
+      this.solicitud.nombre = '' + Math.random();
+    }, 2000)
+
+  }
 
   ngOnInit(): void {
   }
