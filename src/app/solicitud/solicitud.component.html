@@ -11,4 +11,4 @@
 <p [ngClass]="{'mayor': +solicitud.nombre > 0.5,
                 'menor': +solicitud.nombre < 0.5 }">Prueba de ngClass</p>
 
-<button (click)="logear()"> Prueba de log</button>
+<button (click)="logear(solicitud.nombre)"> Prueba de log</button>
