@@ -8,5 +8,7 @@
 </style>
 <p [style.color]="+solicitud.nombre > 0.5 ? 'red' : 'blue'">solicitud works!</p>
 
-<p [ngClass]="{mayor: +solicitud.nombre > 0.5,
-                menor: +solicitud.nombre < 0.5 }">Prueba de ngClass</p>
+<p [ngClass]="{'mayor': +solicitud.nombre > 0.5,
+                'menor': +solicitud.nombre < 0.5 }">Prueba de ngClass</p>
+
+<button (click)="logear()"> Prueba de log</button>

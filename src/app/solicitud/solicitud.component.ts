@@ -19,4 +19,8 @@ export class SolicitudComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logear(): void{
+    console.log("Hola!");
+  }
+
 }
