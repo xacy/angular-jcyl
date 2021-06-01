@@ -7,7 +7,7 @@
   </div>
   <div class="campos">
     <label>Apellidos</label>
-    <input (keyup)="apellidos($event)">
+    <input [ngClass]="{largos: esLargo, cortos: !esLargo}" (keyup)="nombre($event)">
   </div>
   <div  class="campos">
     <button>Primary</button>

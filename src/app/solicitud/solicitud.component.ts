@@ -11,6 +11,7 @@ export class SolicitudComponent implements OnInit {
     nombre: "Javier",
     apellidos: "Prueba"
   };
+  esLargo=false;
 
   constructor() {
     setInterval(() => {
@@ -28,10 +29,10 @@ export class SolicitudComponent implements OnInit {
   apellidos($event: KeyboardEvent) {
     const element = $event.target as HTMLInputElement
     this.solicitud.apellidos = element.value;
-    element.classList.remove("largo");
+    /*element.classList.remove("largo");
     element.classList.remove("corto");
-    this.solicitud.apellidos.length>5?element.classList.add("largo"):element.classList.add("corto");
-
+    this.solicitud.apellidos.length>5?element.classList.add("largo"):element.classList.add("corto");*/
+    this.esLargo=this.solicitud.apellidos.length>5;
   }
   nombre($event: KeyboardEvent) {
     const element = $event.target as HTMLInputElement
