@@ -1,0 +1,23 @@
+.mayor{
+  color: red;
+}
+.menor{
+  color: blue;
+}
+.campos{
+  margin-bottom: 1em;
+}
+label{
+  display: block;
+}
+input{
+  width: 5em;
+}
+.largo{
+  background-color: red;
+  color: white;
+}
+.corto{
+  background-color: blue;
+  color: white;
+}

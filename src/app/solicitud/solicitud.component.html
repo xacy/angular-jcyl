@@ -1,14 +1,15 @@
-<style>
-  .mayor{
-    color: red;
-  }
-  .menor{
-    color: blue;
-  }
-</style>
-<p [style.color]="+solicitud.nombre > 0.5 ? 'red' : 'blue'">solicitud works!</p>
-
-<p [ngClass]="{'mayor': +solicitud.nombre > 0.5,
-                'menor': +solicitud.nombre < 0.5 }">Prueba de ngClass</p>
-
-<button (click)="logear(solicitud.nombre)"> Prueba de log</button>
+<form>
+  <h1>Solicitud de comedor</h1>
+  <p>Nueva solicitud</p>
+  <div class="campos">
+    <label>Nombre</label>
+    <input (keyup)="nombre($event)">
+  </div>
+  <div class="campos">
+    <label>Apellidos</label>
+    <input (keyup)="apellidos($event)">
+  </div>
+  <div  class="campos">
+    <button>Primary</button>
+  </div>
+</form>
