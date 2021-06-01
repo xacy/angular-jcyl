@@ -14,9 +14,9 @@ export class SolicitudComponent implements OnInit {
   esLargo=false;
 
   constructor() {
-    setInterval(() => {
+    /*setInterval(() => {
       this.solicitud.nombre = '' + Math.random();
-    }, 2000)
+    }, 2000)*/
 
   }
 
@@ -40,5 +40,9 @@ export class SolicitudComponent implements OnInit {
     element.classList.remove("largo");
     element.classList.remove("corto");
     this.solicitud.nombre.length>5?element.classList.add("largo"):element.classList.add("corto");
+  }
+  validaciones($event: Event){
+    $event.preventDefault();
+    console.log("validaciones");
   }
 }

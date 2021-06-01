@@ -1,15 +1,21 @@
 <form>
   <h1>Solicitud de comedor</h1>
   <p>Nueva solicitud</p>
+  <p *ngIf="!solicitud.apellidos">
+    Los apellidos no pueden estar vacíos.
+  </p>
+  <p *ngIf="!solicitud.nombre">
+    El nombre no puede estar vacío.
+  </p>
   <div class="campos">
     <label>Nombre</label>
-    <input (keyup)="nombre($event)">
+    <input (keyup)="nombre($event)" id="nombre" value="{{solicitud.nombre}}">
   </div>
   <div class="campos">
     <label>Apellidos</label>
-    <input [ngClass]="{largos: esLargo, cortos: !esLargo}" (keyup)="nombre($event)">
+    <input [ngClass]="{'largo': esLargo, 'corto': !esLargo}" (keyup)="apellidos($event)" value="{{solicitud.apellidos}}">
   </div>
   <div  class="campos">
-    <button>Primary</button>
+    <button (click)="validaciones($event)">Primary</button>
   </div>
 </form>
