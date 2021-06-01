@@ -12,6 +12,14 @@ export class SolicitudComponent implements OnInit {
     apellidos: "Prueba"
   };
   esLargo=false;
+  solicitudes = [ {
+    nombre: "Javier",
+    apellidos: "Prueba"},
+    {
+      nombre: "Javier2",
+      apellidos: "Prueba2"
+    }
+  ];
 
   constructor() {
     /*setInterval(() => {
