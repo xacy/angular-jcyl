@@ -9,15 +9,19 @@ export class SolicitudComponent implements OnInit {
 
   solicitud = {
     nombre: "Javier",
-    apellidos: "Prueba"
+    apellidos: "Prueba",
+    fechaNacimiento: new Date()
   };
   esLargo=false;
   solicitudes = [ {
     nombre: "Javier",
-    apellidos: "Prueba"},
+    apellidos: "Prueba",
+    fechaNacimiento: new Date()
+  },
     {
       nombre: "Javier2",
-      apellidos: "Prueba2"
+      apellidos: "Prueba2",
+      fechaNacimiento: new Date()
     }
   ];
 

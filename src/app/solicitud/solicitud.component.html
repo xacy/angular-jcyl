@@ -28,6 +28,7 @@
     <tr *ngFor="let soli of solicitudes">
       <td>{{soli.nombre}}</td>
       <td>{{soli.apellidos}}</td>
+      <td>{{soli.fechaNacimiento | date:'dd - MM - yyyy'}}</td>
     </tr>
   </table>
 </form>
