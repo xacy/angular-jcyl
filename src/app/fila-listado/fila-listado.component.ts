@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FilaListadoComponent implements OnInit {
 
-  @Input() solicitudes: any;
+  @Input() solicitudes: any=[];
   @Output() solicitudClick = new EventEmitter();
 
   constructor() {

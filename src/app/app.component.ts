@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {SolicitudesService} from "./solicitudes.service";
+import {Solicitud} from "./Solicitud";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import {SolicitudesService} from "./solicitudes.service";
 })
 export class AppComponent {
   title = 'angular-jcyl';
-  solicitudes = [];
+  solicitudes :Solicitud[] = [];
   solicitudSeleccionada: any;
 
   tratarClick($event: any){
@@ -21,6 +22,18 @@ export class AppComponent {
   }
 
   constructor(private solicitudesService:SolicitudesService) {
-    this.solicitudes=solicitudesService.getSolicitudes();
+    solicitudesService.getSolicitudes().then((x: any) => {
+      console.log(x);
+      x.items.forEach((item:any,index:number) =>{
+        this.solicitudes.push({
+          nombre: item.fields.nombre,
+          apellidos: item.fields.apellidos,
+          nacimiento: item.fields.nacimiento || new Date(),
+          ayuda: item.fields.ayuda,
+          tipoSolicitud: item.fields.tipoSolicitud
+        });
+      });
+      console.log("tamaño:"+this.solicitudes.length);
+    });
   }
 }

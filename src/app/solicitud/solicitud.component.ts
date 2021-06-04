@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Solicitud} from "../Solicitud";
 
 @Component({
   selector: 'app-solicitud',
@@ -8,10 +9,12 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class SolicitudComponent implements OnInit {
 
   @Input()
-  solicitud = {
-    nombre: "Javier",
-    apellidos: "Prueba",
-    fechaNacimiento: new Date()
+  solicitud:Solicitud={
+    nombre: "",
+    apellidos: "",
+    nacimiento: new Date(),
+    ayuda: "",
+    tipoSolicitud:""
   };
   @Output()
   eliminarSolicitud = new EventEmitter();

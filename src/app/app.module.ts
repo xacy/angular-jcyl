@@ -8,6 +8,7 @@ import { CentroComponent } from './centro/centro.component';
 import { SelectorCentroComponent } from './selector-centro/selector-centro.component';
 import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solicitudes.component';
 import { FilaListadoComponent } from './fila-listado/fila-listado.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilaListadoComponent } from './fila-listado/fila-listado.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

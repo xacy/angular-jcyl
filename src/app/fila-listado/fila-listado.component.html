@@ -1,5 +1,5 @@
-<tr *ngFor="let soli of solicitudes" (click)="this.solicitudClick.emit(soli)">
-    <td>{{soli.nombre}}</td>
-    <td>{{soli.apellidos}}</td>
-    <td>{{soli.fechaNacimiento | date:'dd - MM - yyyy'}}</td>
+<tr *ngFor="let soli of solicitudes;let indice =index" (click)="this.solicitudClick.emit(soli)">
+    <td>{{soli?.nombre}}</td>
+    <td>{{soli?.apellidos}}</td>
+    <td>{{soli?.nacimiento | date:'dd - MM - yyyy'}}</td>
 </tr>

@@ -1,6 +1,7 @@
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import {Component, Input, OnInit} from '@angular/core';
+import {Solicitud} from "../Solicitud";
 
 @Component({
   selector: 'app-listado-solicitudes',
@@ -14,7 +15,7 @@ export class ListadoSolicitudesComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input()
-  solicitudes:any;
+  solicitudes:Solicitud[]=[];
   @Output()
   clickEnElemento = new EventEmitter();
 
