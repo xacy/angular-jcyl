@@ -303,8 +303,8 @@
     }
   }
 </style>
-
-<app-solicitud></app-solicitud>
+<app-listado-solicitudes [solicitudes]="solicitudes" (clickEnElemento)="tratarClick($event)"></app-listado-solicitudes>
+<app-solicitud [solicitud]="solicitudSeleccionada" (eliminarSolicitud)="eliminarSolicitud($event)"></app-solicitud>
 <app-centro [centro]="{nombreCentro:'IES Federico García Lorca',direccionCentro:'Paseo del cauce'}"></app-centro>
 <br/>
 <app-selector-centro></app-selector-centro>

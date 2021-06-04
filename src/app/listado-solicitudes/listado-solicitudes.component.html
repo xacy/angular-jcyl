@@ -1,0 +1,10 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellidos</th>
+    <th>Fecha Nacimiento</th>
+  </tr>
+  </thead>
+  <app-fila-listado [solicitudes]="solicitudes" (solicitudClick)="clickEnElemento.emit($event)"></app-fila-listado>
+</table>

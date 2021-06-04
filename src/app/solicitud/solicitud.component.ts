@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-solicitud',
@@ -7,23 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitudComponent implements OnInit {
 
+  @Input()
   solicitud = {
     nombre: "Javier",
     apellidos: "Prueba",
     fechaNacimiento: new Date()
   };
+  @Output()
+  eliminarSolicitud = new EventEmitter();
   esLargo=false;
-  solicitudes = [ {
-    nombre: "Javier",
-    apellidos: "Prueba",
-    fechaNacimiento: new Date()
-  },
-    {
-      nombre: "Javier2",
-      apellidos: "Prueba2",
-      fechaNacimiento: new Date()
-    }
-  ];
+
 
   constructor() {
     /*setInterval(() => {
@@ -56,5 +49,14 @@ export class SolicitudComponent implements OnInit {
   validaciones($event: Event){
     $event.preventDefault();
     console.log("validaciones");
+  }
+  eliminar($event: Event){
+    $event.preventDefault();
+    if(this.solicitud!=null){
+      this.eliminarSolicitud.emit(this.solicitud);
+    }
+    else{
+      alert("No se ha seleccionado una solicitud");
+    }
   }
 }
