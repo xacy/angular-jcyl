@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SolicitudesService} from "./solicitudes.service";
 
 @Component({
   selector: 'app-root',
@@ -7,17 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-jcyl';
-  solicitudes = [ {
-    nombre: "Javier",
-    apellidos: "Prueba",
-    fechaNacimiento: new Date()
-  },
-    {
-      nombre: "Javier2",
-      apellidos: "Prueba2",
-      fechaNacimiento: new Date()
-    }
-  ];
+  solicitudes = [];
   solicitudSeleccionada: any;
 
   tratarClick($event: any){
@@ -27,5 +18,9 @@ export class AppComponent {
       this.solicitudes.forEach( (solicitud, index) => {
         if(solicitud === $event) this.solicitudes.splice(index,1);
       });
+  }
+
+  constructor(private solicitudesService:SolicitudesService) {
+    this.solicitudes=solicitudesService.getSolicitudes();
   }
 }
