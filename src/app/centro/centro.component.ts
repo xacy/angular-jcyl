@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-centro',
@@ -7,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CentroComponent implements OnInit {
 
-  centro = {
-    nombreCentro: "IES García Lorca"
-  }
+  @Input()
+  centro: Centros = {nombreCentro: "Prueba",direccionCentro:"Valor defecto"};
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+}
+export interface Centros{
+  nombreCentro:String;
+  direccionCentro:String;
 }
