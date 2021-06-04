@@ -1,6 +1,6 @@
 <b><label for="selectorCentro">Centro</label></b>
-<input (keyup)="centro($event)" id="selectorCentro"/>
+<input (keyup)="centro($event)" id="selectorCentro"  [value]="centroSeleccionado.nombre"/>
 <ul>
-  <li *ngFor="let centro of centrosFiltrados;">{{centro.nombre}}</li>
+  <li (click)="seleccionarCentro(centro)" *ngFor="let centro of centrosFiltrados;">{{centro.nombre}}</li>
 </ul>
 

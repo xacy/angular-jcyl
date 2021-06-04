@@ -9,6 +9,7 @@ export class SelectorCentroComponent implements OnInit {
 
   centros =[{nombre:"Federico García Lorca"},{nombre:"Fernando de Rojas"},{nombre:"Agustinas"}];
   centrosFiltrados:any;
+  centroSeleccionado:{nombre:string}={nombre:""};
   constructor() { }
 
   ngOnInit(): void {
@@ -17,6 +18,9 @@ export class SelectorCentroComponent implements OnInit {
     const element = $event.target as HTMLInputElement
     this.centrosFiltrados = [...this.centros].filter(centro =>
     centro.nombre.includes(element.value))
+  }
+  seleccionarCentro(centro:any){
+    this.centroSeleccionado=centro;
   }
 
 }
