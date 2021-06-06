@@ -303,11 +303,10 @@
     }
   }
 </style>
-<app-listado-solicitudes [solicitudes]="solicitudes" (clickEnElemento)="tratarClick($event)"></app-listado-solicitudes>
-<app-solicitud [solicitud]="solicitudSeleccionada" (eliminarSolicitud)="eliminarSolicitud($event)"></app-solicitud>
-<app-centro [centro]="{nombreCentro:'IES Federico García Lorca',direccionCentro:'Paseo del cauce'}"></app-centro>
-<br/>
-<app-selector-centro></app-selector-centro>
+<h1>Principal</h1>
+<a routerLink="">Solicitudes</a> <br/>
+<a routerLink="centros">Listado de centros</a>
+<router-outlet></router-outlet>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
