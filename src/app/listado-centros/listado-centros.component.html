@@ -1,0 +1,6 @@
+<h2>Listado centros</h2>
+<ul>
+  <li *ngFor="let centro of centros;">
+    {{centro.nombre}} <button [routerLink]="['/centros', centro.nombre]">Consultar</button>
+  </li>
+</ul>
