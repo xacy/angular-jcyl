@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoCentrosComponent implements OnInit {
 
-  centros =[{nombre:"Federico García Lorca"},{nombre:"Fernando de Rojas"},{nombre:"Agustinas"}];
+  centros =[{id:1,nombre:"Federico García Lorca"},{id:2,nombre:"Fernando de Rojas"},{id:3,nombre:"Agustinas"}];
 
   constructor() { }
 
