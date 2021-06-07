@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {accessToken} from "./access_token";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class SolicitudesService {
       apellidos: "Prueba2",
       fechaNacimiento: new Date()
       }];*/
-    const accessToken = 'w553KmY_mhtkpRngkuh6qoYMPc-McVjwAjSNbQ0IxNs';
+
     return this.httpClient.get(
       `https://cdn.contentful.com/spaces/im9x7su136k8/environments/master/entries?access_token=${accessToken}`)
       .toPromise().then(
