@@ -23,7 +23,11 @@ export class SolicitudesService {
     const accessToken = 'w553KmY_mhtkpRngkuh6qoYMPc-McVjwAjSNbQ0IxNs';
     return this.httpClient.get(
       `https://cdn.contentful.com/spaces/im9x7su136k8/environments/master/entries?access_token=${accessToken}`)
-      .toPromise();
+      .toPromise().then(
+        (x: any) => {
+          x.items.map((data: any) => data.fields);
+        }
+      );
 
   }
 }
