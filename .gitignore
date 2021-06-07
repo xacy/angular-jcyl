@@ -43,3 +43,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#token
+/src/app/access_token.ts
