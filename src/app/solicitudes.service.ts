@@ -24,10 +24,10 @@ export class SolicitudesService {
 
     return this.httpClient.get(
       `https://cdn.contentful.com/spaces/im9x7su136k8/environments/master/entries?access_token=${accessToken}`)
-      .toPromise().then(
-        (x: any) => {
-          x.items.map((data: any) => data.fields);
-        }
+      .toPromise()
+      .then(
+        (x: any) => x.items.map(
+          (y: any) => y.fields)
       );
 
   }
