@@ -12,13 +12,13 @@ import {SolicitudesService} from "../solicitudes.service";
 export class ListadoSolicitudesComponent implements OnInit {
 
   constructor(private solicitudesService:SolicitudesService) {
-    this.solicitudes = solicitudesService.getSolicitudes();
+    this.solicitudes$ = solicitudesService.getSolicitudes();
   }
 
   ngOnInit(): void {
   }
   @Input()
-  solicitudes:any;
+  solicitudes$:any;
   @Output()
   clickEnElemento = new EventEmitter();
 

@@ -7,7 +7,7 @@
     <th>Fecha Nacimiento</th>
   </tr>
   </thead>
-  <tr *ngFor="let soli of solicitudes | async;let indice =index" (click)="this.clickEnElemento.emit(soli)">
+  <tr *ngFor="let soli of solicitudes$ | async;let indice =index" (click)="this.clickEnElemento.emit(soli)">
     <app-fila-listado [solicitud]="soli" ></app-fila-listado>
   </tr>
 

@@ -10,21 +10,21 @@ import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solic
 import { FilaListadoComponent } from './fila-listado/fila-listado.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ListadoCentrosComponent } from './listado-centros/listado-centros.component';
+import {SolicitudModule} from './solicitud-module/solicitud-module.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SolicitudComponent,
     CentroComponent,
-    SelectorCentroComponent,
     ListadoSolicitudesComponent,
     FilaListadoComponent,
-    ListadoCentrosComponent
+    ListadoCentrosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SolicitudModule
   ],
   providers: [],
   bootstrap: [AppComponent]
