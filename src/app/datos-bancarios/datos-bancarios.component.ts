@@ -1,5 +1,5 @@
 import { Component, OnInit ,} from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-datos-bancarios',
@@ -8,14 +8,18 @@ import {FormsModule} from "@angular/forms";
 })
 export class DatosBancariosComponent implements OnInit {
 
-  constructor() { }
+  f: FormGroup;
+
+  constructor(private formsBuilder: FormBuilder) {
+    this.f = formsBuilder.group({ entidad: '', digitoControl: '' });
+  }
 
   ngOnInit(): void {
   }
-  submit(f:any) {
-    console.log(f);
-    if (f.controls.DigitoControl.errors) {
-      console.log(f.controls.DigitoControl.errors);
+  submit() {
+    console.log(this.f);
+    if (this.f.controls.digitoControl.errors) {
+      console.log(this.f.controls.digitoControl.errors);
     }
   }
 }

@@ -12,7 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { ListadoCentrosComponent } from './listado-centros/listado-centros.component';
 import {SolicitudModule} from './solicitud-module/solicitud-module.component';
 import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.component';
-import {FormsModule} from "@angular/forms";
+import { ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     HttpClientModule,
     SolicitudModule,
-    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

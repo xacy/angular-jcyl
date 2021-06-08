@@ -1,7 +1,7 @@
-<form #f="ngForm" (ngSubmit)="submit(f)">
+<form  [formGroup]="f">
   <label for="entidad">Entidad</label>
-  <input type="text" ngModel name="entidad" id="entidad">
+  <input type="text" name="entidad" id="entidad" formControlName="entidad">
   <label for="DigitoControl">Numeros</label>
-  <input type="text" ngModel name="DigitoControl" id="DigitoControl" required minlength="3">
-  <button [disabled]="!f.valid">Enviar</button>
+  <input type="text" formControlName="digitoControl" name="digitoControl" id="digitoControl" required minlength="3">
+  <button [disabled]="!f.valid" (click)="submit()">Enviar</button>
 </form>
