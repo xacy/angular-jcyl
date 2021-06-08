@@ -1,5 +1,5 @@
 import { Component, OnInit ,} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-datos-bancarios',
@@ -13,11 +13,26 @@ export class DatosBancariosComponent implements OnInit {
   entidades : string='prueba';
 
   constructor(private formsBuilder: FormBuilder) {
-    this.f = formsBuilder.group({ entidad: '', digitoControl: '' });
+    this.f = formsBuilder.group({
+      entidad:  [ '', [Validators.required, this.myValidator]],
+      digitoControl: '' });
   }
 
   ngOnInit(): void {
   }
+
+  myValidator(formControl: FormControl) {
+    console.log(formControl);
+    if(formControl.value){
+      console.log("valido");
+    }
+    else{
+      console.log("invalido");
+    }
+    return !formControl.value ? { InvalidValue: true } : {};
+  }
+
+
   submit() {
     console.log(this.f);
     if (this.f.controls.digitoControl.errors) {
