@@ -10,12 +10,15 @@ export class DatosBancariosComponent implements OnInit {
 
   f: FormGroup;
 
+  entidadGroup = new FormControl('', [Validators. required, this.myValidator]);
+
   entidades : string='prueba';
 
   constructor(private formsBuilder: FormBuilder) {
     this.f = formsBuilder.group({
-      entidad:  [ '', [Validators.required, this.myValidator]],
+      entidad:  this.entidadGroup,
       digitoControl: '' });
+    this.entidadGroup.valueChanges.subscribe((x:any) => console.log("prueba: "+x));
   }
 
   ngOnInit(): void {
