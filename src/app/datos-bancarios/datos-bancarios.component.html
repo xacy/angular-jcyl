@@ -1,5 +1,7 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
   <label for="entidad">Entidad</label>
-  <input type="text" ngModel="" name="entidad" id="entidad">
-  <button type="submit">Guardar</button>
+  <input type="text" ngModel name="entidad" id="entidad">
+  <label for="DigitoControl">Numeros</label>
+  <input type="text" ngModel name="DigitoControl" id="DigitoControl" required minlength="3">
+  <button [disabled]="!f.valid">Enviar</button>
 </form>

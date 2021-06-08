@@ -12,5 +12,10 @@ export class DatosBancariosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  submit(f:any) {console.log(f);}
+  submit(f:any) {
+    console.log(f);
+    if (f.controls.DigitoControl.errors) {
+      console.log(f.controls.DigitoControl.errors);
+    }
+  }
 }
