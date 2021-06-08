@@ -4,10 +4,12 @@ import {ListadoSolicitudesComponent} from "./listado-solicitudes/listado-solicit
 
 import {ListadoCentrosComponent} from "./listado-centros/listado-centros.component";
 import {CentroComponent} from "./centro/centro.component";
+import {DatosBancariosComponent} from "./datos-bancarios/datos-bancarios.component";
 
 const routes: Routes = [
   {path: '', component: ListadoSolicitudesComponent},
   {path: 'centros', component: ListadoCentrosComponent},
+  {path: 'entidades', component: DatosBancariosComponent},
   {path: 'centros/:centroId', component: CentroComponent},
 
 ];
