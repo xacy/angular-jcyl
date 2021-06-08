@@ -10,6 +10,8 @@ export class DatosBancariosComponent implements OnInit {
 
   f: FormGroup;
 
+  entidades : string='prueba';
+
   constructor(private formsBuilder: FormBuilder) {
     this.f = formsBuilder.group({ entidad: '', digitoControl: '' });
   }

@@ -1,6 +1,6 @@
 <form  [formGroup]="f">
   <label for="entidad">Entidad</label>
-  <input type="text" name="entidad" id="entidad" formControlName="entidad">
+  <input type="text" name="entidad" id="entidad" formControlName="entidad" [(ngModel)]="entidades">
   <label for="DigitoControl">Numeros</label>
   <input type="text" formControlName="digitoControl" name="digitoControl" id="digitoControl" required minlength="3">
   <button [disabled]="!f.valid" (click)="submit()">Enviar</button>
