@@ -307,6 +307,13 @@
 <a routerLink="">Solicitudes</a> <br/>
 <a routerLink="centros">Listado de centros</a>
 <a routerLink="entidades">Formulario entidades</a>
+<br/>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="date"
+         (dateInput)="log($event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
 <router-outlet></router-outlet>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

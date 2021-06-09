@@ -24,4 +24,7 @@ export class AppComponent {
   constructor() {
 
   }
+  log($event: any){
+    console.log($event);
+  }
 }
