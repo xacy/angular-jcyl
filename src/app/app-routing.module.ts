@@ -6,6 +6,7 @@ import {ListadoCentrosComponent} from "./listado-centros/listado-centros.compone
 import {CentroComponent} from "./centro/centro.component";
 import {DatosBancariosComponent} from "./datos-bancarios/datos-bancarios.component";
 import {RouteActivateGuardGuard} from "./route-activate-guard.guard";
+import {AppComponent} from "./app.component";
 
 const routes: Routes = [
   {path: '', component: ListadoSolicitudesComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'centros/:centroId', component: CentroComponent},
   {path: 'solicitudes', loadChildren: () =>
       import('./solicitud-module/solicitud-module.component').then(m => m.SolicitudModule)},
+  { path: '**', component: ListadoSolicitudesComponent }
 
 ];
 
