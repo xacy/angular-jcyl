@@ -302,11 +302,15 @@
       visibility: hidden;
     }
   }
+  a{
+    display: block;
+  }
 </style>
 <h1>Principal</h1>
-<a routerLink="">Solicitudes</a> <br/>
+<a routerLink="">Inicio</a>
 <a routerLink="centros">Listado de centros</a>
 <a routerLink="entidades">Formulario entidades</a>
+<a routerLink="solicitudes">Solicitudes</a>
 <br/>
 <mat-form-field>
   <input matInput [matDatepicker]="picker" placeholder="date"

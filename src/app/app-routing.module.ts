@@ -12,6 +12,8 @@ const routes: Routes = [
   {path: 'centros', component: ListadoCentrosComponent, canActivate: [RouteActivateGuardGuard]},
   {path: 'entidades', component: DatosBancariosComponent},
   {path: 'centros/:centroId', component: CentroComponent},
+  {path: 'solicitudes', loadChildren: () =>
+      import('./solicitud-module/solicitud-module.component').then(m => m.SolicitudModule)},
 
 ];
 

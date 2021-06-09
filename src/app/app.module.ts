@@ -8,7 +8,6 @@ import { ListadoSolicitudesComponent } from './listado-solicitudes/listado-solic
 import { FilaListadoComponent } from './fila-listado/fila-listado.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ListadoCentrosComponent } from './listado-centros/listado-centros.component';
-import {SolicitudModule} from './solicitud-module/solicitud-module.component';
 import { DatosBancariosComponent } from './datos-bancarios/datos-bancarios.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,7 +29,6 @@ import {MatNativeDateModule} from "@angular/material/core";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SolicitudModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
